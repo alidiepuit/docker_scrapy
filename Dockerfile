@@ -21,10 +21,11 @@ RUN pip install boto3
  
 ## Scraping
 RUN pip install beautifulsoup4 requests 
-RUN apt-get install -qy libffi-dev libxml2-dev libxslt-dev lib32z1-dev libssl-dev
+##Requirement
+RUN apt-get install -qy libffi-dev libxml2-dev libxslt-dev lib32z1-dev libssl-dev libmysqlclient-dev
  
 ## Scrapy
-RUN pip install lxml scrapy scrapyjs
+RUN pip install lxml scrapy scrapyjs slugify MySQL-python mysql-connector-python-rf
 
 ##Net tool
-RUN apt-get install -y net-tools
+RUN apt-get install -y net-tools iputils-ping
